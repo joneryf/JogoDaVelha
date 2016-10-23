@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.developer.jonery.jogodavelha.MainActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_tictactoe"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_gravity="center"
+            android:id="@+id/gameTable">
+
+            <ImageView
+                android:id="@+id/imagePos1"
+                android:layout_margin="8dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:src="@drawable/o_verde_hdpi"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="1"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos2"
+                android:layout_margin="8dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="2"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos3"
+                android:layout_margin="8dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="3"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos4"
+                android:layout_margin="8dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="4"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos5"
+                android:layout_margin="8dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="5"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos6"
+                android:layout_margin="8dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="6"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos7"
+                android:layout_margin="8dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="7"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos8"
+                android:layout_margin="8dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="8"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+            <ImageView
+                android:src="@drawable/o_verde_hdpi"
+                android:id="@+id/imagePos9"
+                android:layout_margin="8dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:tag="9"
+                android:clickable="true"
+                android:onClick="onClickJogar" />
+        </GridLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/linha_crescente"
+            android:id="@+id/linhaResultado" />
+
+    </FrameLayout>
+
+    <Button
+        android:text="Novo Jogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newGame"
+        android:onClick="onClickReiniciar" />
+
+    <TextView
+        android:text="IP Remoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="192.168.0.17"
+        android:ems="10"
+        android:id="@+id/txtRemoto"/>
+</LinearLayout>
